@@ -1,0 +1,47 @@
+.header {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px 0 ;
+  }
+  &__text{
+    position: relative;
+
+    font-family: $fontPopinsRegular;
+    font-weight: 500;
+    font-size: 32px;
+
+    text-decoration: none;
+
+    color: $textColor;
+    
+    @media (max-width: 650px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+    
+   &:hover,
+   &:active {
+     &:after {
+       content: '';
+
+       display: block;
+
+       position: absolute;
+       width: 100%;
+       height: 2px;
+
+       background-color: $textColor;
+     }
+   }
+  }
+  .logo {
+    font-weight: 600;
+  }
+
+}

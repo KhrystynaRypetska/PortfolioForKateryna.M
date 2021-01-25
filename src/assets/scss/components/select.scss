@@ -1,0 +1,69 @@
+.select {
+  padding: 30px 15px 60px;
+
+  &__options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__text  {
+      position: relative;
+      margin-right: 40px;
+
+      font-family: $fontPopinsRegular;
+      font-weight: 500;
+      font-size: 20px;
+
+      color: $textColorSelect;
+
+      &:active {
+        color: $textColor;
+
+        &:after {
+          content: '';
+          display: block;
+
+          position: absolute;
+          width: 100%;
+          height: 1px;
+
+          transition: all .3s;
+
+          background-color: $textColor;
+        }
+      }
+      &:hover{
+        cursor: pointer;
+        color: $textColor;
+
+        &:after {
+          content: '';
+          display: block;
+
+          position: absolute;
+          background-color: $textColor;
+          width: 100%;
+          height: 1px;
+
+          transition: all .3s;
+        }
+      }
+    }
+  }
+}
+.active {
+  color: $textColor;
+
+  &:after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    width: 100%;
+    height: 1px;
+
+    transition: all .3s;
+
+    background-color: $textColor;
+  }
+}
